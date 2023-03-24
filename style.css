@@ -89,4 +89,15 @@ p {
     position: absolute;
     bottom: 0;
     width: 100%;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        position: relative;
+        z-index: 1;
+    }
 }
