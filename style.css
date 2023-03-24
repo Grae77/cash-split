@@ -100,3 +100,15 @@ footer {
     max-width: 500px;
     margin: 0 auto;
 }
+
+@media (max-width: 600px) {
+    .footer {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        display: none;
+    }
+}
