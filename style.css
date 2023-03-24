@@ -81,34 +81,12 @@ p {
     margin-top: 40px;
 }
 
-footer {
+.footer {
     font-family: montserrat light;
-    background-color: #4c53af;
-    color: #fff;
-    font-size: 10px;
+    font-size: 14px;
     padding: 10px;
     text-align: center;
     position: absolute;
     bottom: 0;
     width: 100%;
-}
-
-.container {
-    font-size: 10px;
-    padding-bottom: 15px;
-    opacity: 50%;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-@media (max-width: 600px) {
-    .footer {
-        display: none;
-    }
-}
-
-@media (max-width: 600px) {
-    .container {
-        display: none;
-    }
 }
