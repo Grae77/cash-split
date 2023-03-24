@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Splitwise Clone</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        form {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 500px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        input[type="number"] {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+        input[type="submit"] {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4c53af;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #4c53af;
+        }
+        h2 {
+            margin-top: 40px;
+        }
+        p {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+    </head>
+  <body>
+    <form id="tip-calculator">
+      <h1>Splitwise Clone</h1>
+      <label for="bill">What was the total bill?</label>
+      <br>
+      <input type="number" id="bill" name="bill" placeholder="₹">
+      <br>
+      <label for="tip">What percentage tip would you like to give? 10, 12, or 15?</label>
+      <br>
+      <input type="number" id="tip" name="tip" placeholder="%">
+      <br>
+      <label for="people">How many people to split the bill?</label>
+      <br>
+      <input type="number" id="people" name="people" placeholder="Number of people">
+      <br>
+      <input type="submit" value="Calculate">
+    </form>
+    <script>
+      document.getElementById("tip-calculator").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var bill = parseFloat(document.getElementById("bill").value);
+        var tip = parseFloat(document.getElementById("tip").value);
+        var people = parseFloat(document.getElementById("people").value);
+        var tip_p = tip / 100;
+        var tip_percent = tip + tip_p;
+        var total_bill = bill + tip_percent;
+        var split_per_person = total_bill / people;
+        var split_round = split_per_person.toFixed(2);
+        document.getElementById("tip-calculator").reset();
+        document.getElementById("result").innerHTML = "Each person should pay: ₹" + split_round;
+      });
+    </script>
+    <h2 id="result"></h2>
+  </body>
+</html>

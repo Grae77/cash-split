@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Split</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png"></link>
+    <script src="app.js" async defer></script>
+</head>
+<body>
+    <!--Cash Split Form-->
+    <form id="cash-split">
+        <h1 class="header"><img src="logo.png" alt="cash split"></h1>
+        <p class="sub-header">Split your bill with your friends!</p>
+        <label for="bill">What was the total bill?</label>
+    <br>
+        <input type="number" id="bill" name="bill" placeholder="₹">
+    <br>
+        <label for="people">How many people to split the bill?</label>
+    <br>
+        <input type="number" id="people" name="people" placeholder="Number of people">
+    <br>
+        <input type="submit" value="Calculate">
+    </form>
+
+    <!--Result-->
+    <h2 id="result"></h2>
+
+    <footer>
+        <div class="container">
+            <p>© Abhiraj Chaudhuri 2023. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
