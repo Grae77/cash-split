@@ -1,6 +1,9 @@
-body{
-    background-image: url('bg.jpg');
-    background-repeat: no-repeat;
+/* Default styles */
+body {
+    background: linear-gradient(rgba(240, 240, 240, 0.6),
+                rgba(240, 240, 240, 0.8)),
+                url('bg.jpg') repeat-y;
+    background-repeat: repeat-y;
     background-size: cover;
     background-color: #f0f0f0;
     font-family: Montserrat Medium;
@@ -11,10 +14,10 @@ body{
     padding: 0;
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
-    width: 380px;
+    width: 100%;
     padding-bottom: 0px;
     object-fit: fill;
 }
@@ -26,11 +29,10 @@ form {
     background-color: #fff;
     border-radius: 10px;
     padding: 40px;
-    margin: 100px auto;
-    max-width: 35%;
+    margin: 50px auto;
+    max-width: 80%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
 
 input[type="number"] {
     width: 100%;
@@ -44,6 +46,7 @@ input[type="number"] {
     font-weight: bold;
     text-align: center;
 }
+
 input[type="submit"] {
     width: 100%;
     margin: 10px 0;
@@ -58,7 +61,7 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-h1, h2 {
+h1,h2 {
     text-align: center;
     color: #4c53af;
 }
@@ -70,7 +73,7 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 10px 20px;
-    width: 37%; 
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -81,23 +84,152 @@ p {
     margin-top: 40px;
 }
 
-.footer {
+footer {
     font-family: montserrat light;
-    font-size: 14px;
+    font-weight: bold;
+    color: #2e2e2e;
+    font-size: 12px;
     padding: 10px;
     text-align: center;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    position: fixed;
-    left: 0;
-    width: 100%;
-    z-index: -1;
 }
 
-@media (max-width: 768px) {
-    .footer {
-        position: relative;
-        z-index: 1;
+.container {
+    font-size: 12px;
+    padding-bottom: 15px;
+    opacity: 50%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+  /* Responsive styles */
+@media screen and (min-width: 576px) {
+    form {
+    max-width: 60%;
+    }
+    
+    h2 {
+        width: 60%;
+    }
+    
+    .container {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    form {
+    max-width: 50%;
+    }
+    
+    h2 {
+        width: 50%;
+    }
+    
+    .container {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    form {
+        max-width: 40%;
+    }
+    
+    h2 {
+        font-size: 22px;
+        width: 70%;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    input[type="number"] {
+        font-size: 12px;
+    }
+    input[type="submit"] {
+        font-size: 14px;
+    }
+    .container {
+        font-size: 8px;
+        max-width: 300px;
+    }
+    }
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    img {
+        width: 100%;
+        margin-top: 20px;
+    }
+    form {
+        max-width: 90%;
+        margin: 50px auto;
+        padding: 20px;
+    }
+    h2 {
+        font-size: 22px;
+        width: 70%;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    input[type="number"] {
+        font-size: 12px;
+    }
+    input[type="submit"] {
+        font-size: 14px;
+    }
+    .container {
+        font-size: 8px;
+        max-width: 300px;
+    }
+    footer {
+        font-size: 12px;
+    }
+}
+
+            
+@media only screen and (max-width: 500px) {
+    form {
+        max-width: 100%;
+        margin: 30px auto;
+    }
+    h2 {
+        font-size: 20px;
+        width: 80%;
+        margin-top: 10px;
+    }
+    input[type="number"] {
+        font-size: 10px;
+    }
+    input[type="submit"] {
+        font-size: 12px;
+    }
+    .container {
+        font-size: 6px;
+        max-width: 200px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    h2 {
+        font-size: 18px;
+        width: 90%;
+        margin-top: 10px;
+    }
+    input[type="number"] {
+        font-size: 8px;
+    }
+    input[type="submit"] {
+        font-size: 10px;
+    }
+    .container {
+        font-size: 4px;
+        max-width: 150px;
+    }
+    footer {
+        font-size: 10px;
     }
 }
